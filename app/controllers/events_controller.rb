@@ -1,9 +1,13 @@
 class EventsController < ApplicationController
   def index
-    @events = Event.all    
+    @events = Event.search(nil)
   end
 
   def show
     @event = Event.find(params[:id])
+  end
+
+  def search
+    @events = Event.search(params[:query])
   end
 end
