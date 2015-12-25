@@ -1,0 +1,22 @@
+<%= form_for(User.new, url: signup_path, html: {class: "user-form"}) do |f| %>
+  <h3>CoderTicket</h3>
+  <fieldset>
+    <i class="fa fa-user"></i>
+    <%= f.text_field 'name', placeholder: 'Your name' %>
+  </fieldset>
+  <fieldset>
+    <i class="fa fa-envelope"></i>
+    <%= f.text_field 'email', placeholder: 'Your E-mail' %>
+  </fieldset>
+  <fieldset>
+    <i class="fa fa-lock"></i>
+    <%= f.password_field "password", placeholder: "Your password" %>
+  </fieldset>
+  <fieldset>
+    <i class="fa fa-lock"></i>
+    <%= f.password_field "password_confirmation", placeholder: "Confirm your password" %>
+  </fieldset>
+  <%= f.submit "Sign up" %>
+  <p>You have an account already</p>
+  <a href="<%= login_path %>" class="button">Sign in</a>
+<% end %>

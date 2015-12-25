@@ -10,4 +10,8 @@ class EventsController < ApplicationController
   def search
     @events = Event.search(params[:query])
   end
+
+  def new
+    @categories = Category.all
+  end
 end

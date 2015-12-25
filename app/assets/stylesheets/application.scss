@@ -8,6 +8,7 @@
 @import "nav";
 @import "events";
 @import "tickets";
+@import "users";
 
 body {
   font-family: 'Open Sans';
@@ -16,4 +17,9 @@ body {
   background-color: rgb(216, 87, 66);
   border: 2px solid rgb(241, 112, 91);
 }
-
+.flash-message{
+  margin-top: 54px;
+}
+.actived{
+  color: #fff !important;
+}
